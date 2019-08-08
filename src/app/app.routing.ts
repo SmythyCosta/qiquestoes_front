@@ -4,8 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 // Layouts
 //import { PurchasesReportComponent }   from './report/purchases-report/purchases-report.component';
 
-import { LoginComponent } from './login/login.component';
-import { AuthGuard } from './_guards/index';
+import { LoginComponent } from './login/index';
+//import { AuthGuard } from './_guards/index';
 export const appRoutes: Routes = [
 //   {
 //     path: '',
