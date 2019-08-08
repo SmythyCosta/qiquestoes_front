@@ -3,7 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { User } from '@/_models';
+import { User } from '../_models/index';
+
+import { environment as env } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
@@ -20,7 +22,7 @@ export class AuthenticationService {
     }
 
     login(username: string, password: string) {
-        return this.http.post<any>(`${config.apiUrl}/auth/login`, { username, password })
+        return this.http.post<any>(`${env.apiUrl}/auth/login`, { username, password })
             .pipe(map(user => {
 
                 console.log(user);
