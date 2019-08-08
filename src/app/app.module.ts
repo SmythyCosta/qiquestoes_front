@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { AreaFormacaoComponent } from './admin/area-formacao/area-formacao.component';
 import { DisciplinaComponent } from './admin/disciplina/disciplina.component';
 
+// Routing Module
+import { AppRoutingModule } from './app.routing';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +15,8 @@ import { DisciplinaComponent } from './admin/disciplina/disciplina.component';
     DisciplinaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
