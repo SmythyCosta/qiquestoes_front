@@ -6,40 +6,24 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/index';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { FullLayoutComponent } from './layout/index';
 //import { AuthGuard } from './_guards/index';
+
 export const appRoutes: Routes = [
 //   {
 //     path: '',
 //     redirectTo: 'dashboard',
 //     pathMatch: 'full',
 //   },
-//   {
-//     path: '',
-//     component: FullLayoutComponent,
-//     data: {
-//       title: 'Dashboard'
-//     },
-    //children: [
-      //{  path: 'dashboard',component:DashboardComponent, canActivate: [AuthGuard],data: {title: 'Home'}},
-      //{  path: 'customer', component: CustomerComponent, canActivate: [AuthGuard],data: {title: 'Manage Customer'}},
-      //{  path: 'sales-report', component: SalesReportComponent, canActivate: [AuthGuard],data: {title: 'Sales Report'}},
-      //{  path: 'purchases-report', component: PurchasesReportComponent, canActivate: [AuthGuard],data: {title: 'Purchases Report'}}
-    //]
-//  },
   {
-    path: 'login',
-    component: LoginComponent,
-    data: {
-      title: 'login'
-    }
-  },
-  {
-    path: 'dashboard',
-    component: DashboardComponent,
-    data: {
-      title: 'dashboard'
-    }
-  },
+    path: 'admin',
+    component: FullLayoutComponent,
+    children: [
+      {  path: 'area-formacao', loadChildren: './admin/area-formacao/area-formacao.module#areaFormacaoModule' },
+    ]
+ },
+  { path: 'login', component: LoginComponent, data: {title: 'login'} },
+  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({

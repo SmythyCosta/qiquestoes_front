@@ -13,13 +13,15 @@ import { AppRoutingModule } from './app.routing';
 import { LoginComponent } from './login/index';
 
 
-import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+
+import { ContentComponent,
+  FooterComponent,
+  FullLayoutComponent,
+  NavbarExpandComponent,
+  SidebarMenuComponent,  } from './layout/index';
+
+  import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import { NavbarExpandComponent } from './admin/navbar-expand/navbar-expand.component';
-import { SidebarMenuComponent } from './admin/sidebar-menu/sidebar-menu.component';
-import { FooterComponent } from './admin/footer/footer.component';
-import { ContentComponent } from './admin/content/content.component';
-import { FullLayoutComponent } from './layout/full-layout/full-layout.component';
 
 
 
