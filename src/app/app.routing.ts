@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 //import { PurchasesReportComponent }   from './report/purchases-report/purchases-report.component';
 
 import { LoginComponent } from './login/index';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 //import { AuthGuard } from './_guards/index';
 export const appRoutes: Routes = [
 //   {
@@ -31,7 +32,14 @@ export const appRoutes: Routes = [
     data: {
       title: 'login'
     }
-  }
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    data: {
+      title: 'dashboard'
+    }
+  },
 ];
 
 @NgModule({

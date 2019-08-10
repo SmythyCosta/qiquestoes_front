@@ -14,6 +14,11 @@ import { LoginComponent } from './login/index';
 
 
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { NavbarExpandComponent } from './admin/navbar-expand/navbar-expand.component';
+import { SidebarMenuComponent } from './admin/sidebar-menu/sidebar-menu.component';
+import { FooterComponent } from './admin/footer/footer.component';
+import { ContentComponent } from './admin/content/content.component';
 
 
 
@@ -22,7 +27,12 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
     AppComponent,
     AreaFormacaoComponent,
     DisciplinaComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    NavbarExpandComponent,
+    SidebarMenuComponent,
+    FooterComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
