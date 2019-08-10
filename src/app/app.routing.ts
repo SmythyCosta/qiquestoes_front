@@ -10,20 +10,20 @@ import { FullLayoutComponent } from './layout/index';
 //import { AuthGuard } from './_guards/index';
 
 export const appRoutes: Routes = [
-//   {
-//     path: '',
-//     redirectTo: 'dashboard',
-//     pathMatch: 'full',
-//   },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
   {
     path: 'admin',
     component: FullLayoutComponent,
     children: [
-      {  path: 'area-formacao', loadChildren: './admin/area-formacao/area-formacao.module#areaFormacaoModule' },
+      { path: 'area-formacao', loadChildren: './admin/area-formacao/area-formacao.module#AreaFormacaoModule' },
+      { path: 'dashboard', loadChildren: './dashboard/dashboard/dashboard.module#DashboardModule' },
     ]
  },
   { path: 'login', component: LoginComponent, data: {title: 'login'} },
-  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({

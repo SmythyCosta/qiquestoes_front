@@ -5,8 +5,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { AreaFormacaoComponent } from './admin/area-formacao/area-formacao.component';
-import { DisciplinaComponent } from './admin/disciplina/disciplina.component';
 
 // Routing Module
 import { AppRoutingModule } from './app.routing';
@@ -21,17 +19,13 @@ import { ContentComponent,
   SidebarMenuComponent,  } from './layout/index';
 
   import { JwtInterceptor, ErrorInterceptor } from './_helpers';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AreaFormacaoComponent,
-    DisciplinaComponent,
     LoginComponent,
-    DashboardComponent,
     NavbarExpandComponent,
     SidebarMenuComponent,
     FooterComponent,
