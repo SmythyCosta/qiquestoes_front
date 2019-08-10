@@ -19,6 +19,7 @@ import { NavbarExpandComponent } from './admin/navbar-expand/navbar-expand.compo
 import { SidebarMenuComponent } from './admin/sidebar-menu/sidebar-menu.component';
 import { FooterComponent } from './admin/footer/footer.component';
 import { ContentComponent } from './admin/content/content.component';
+import { FullLayoutComponent } from './layout/full-layout/full-layout.component';
 
 
 
@@ -32,7 +33,8 @@ import { ContentComponent } from './admin/content/content.component';
     NavbarExpandComponent,
     SidebarMenuComponent,
     FooterComponent,
-    ContentComponent
+    ContentComponent,
+    FullLayoutComponent
   ],
   imports: [
     BrowserModule,
