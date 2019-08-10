@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule }  from '@angular/forms';
 
 import { AreaFormacaoRoutes } from './area-formacao.routing';
+import { ListarComponent } from './listar/listar/listar.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ListarComponent],
   imports: [
     CommonModule,
     FormsModule,
