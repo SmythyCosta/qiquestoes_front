@@ -3,13 +3,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 // ############## Components ##############
+import { ListarComponent } from './listar/listar.component';
 
 // ############## Helpers ##############
 
 
 
 const areaFormacaoRoutes: Routes = [
-    // { path: '', component: BlocoListComponent, canActivate: [CheckCondominioGuard] },
+    { path: '', component: ListarComponent },
     // { path: 'success/:success', component: BlocoListComponent },
     // { path: 'form', component: BlocoFormComponent, canActivate: [CheckCondominioGuard] },
     // { path: 'form/:id', component: BlocoFormComponent, canActivate: [CheckCondominioGuard] },
