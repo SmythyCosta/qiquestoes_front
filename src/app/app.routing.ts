@@ -5,7 +5,6 @@ import { Routes, RouterModule } from '@angular/router';
 //import { PurchasesReportComponent }   from './report/purchases-report/purchases-report.component';
 
 import { LoginComponent } from './login/index';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { FullLayoutComponent } from './layout/index';
 //import { AuthGuard } from './_guards/index';
 
@@ -20,7 +19,7 @@ export const appRoutes: Routes = [
     component: FullLayoutComponent,
     children: [
       { path: 'area-formacao', loadChildren: './admin/area-formacao/area-formacao.module#AreaFormacaoModule' },
-      { path: 'dashboard', loadChildren: './dashboard/dashboard/dashboard.module#DashboardModule' },
+      //{ path: 'dashboard', loadChildren: './dashboard/dashboard/dashboard.module#DashboardModule' },
     ]
  },
   { path: 'login', component: LoginComponent, data: {title: 'login'} },
