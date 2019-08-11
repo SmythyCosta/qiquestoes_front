@@ -19,6 +19,7 @@ import { ContentComponent,
   SidebarMenuComponent,  } from './layout/index';
 
   import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { RegisterComponent } from './register/register.component';
 
 
 
@@ -30,7 +31,8 @@ import { ContentComponent,
     SidebarMenuComponent,
     FooterComponent,
     ContentComponent,
-    FullLayoutComponent
+    FullLayoutComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
