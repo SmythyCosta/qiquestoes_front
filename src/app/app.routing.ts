@@ -19,6 +19,9 @@ export const appRoutes: Routes = [
     component: FullLayoutComponent,
     children: [
       { path: 'area-formacao', loadChildren: './admin/area-formacao/area-formacao.module#AreaFormacaoModule' },
+      { path: 'disciplina', loadChildren: './admin/disciplina/disciplina.module#DisciplinaModule' },
+      { path: 'questoes', loadChildren: './admin/questoes/questoes.module#QuestoesModule' },
+      //{ path: 'area-formacao', loadChildren: './admin/area-formacao/area-formacao.module#AreaFormacaoModule' },
       //{ path: 'dashboard', loadChildren: './dashboard/dashboard/dashboard.module#DashboardModule' },
     ]
  },
