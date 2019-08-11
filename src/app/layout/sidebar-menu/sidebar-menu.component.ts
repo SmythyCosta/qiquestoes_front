@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarMenuComponent implements OnInit {
 
+  menu = {
+		active: '',
+	}
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  activeMenu(event) {
+		this.menu.active = event;
+	}
 
 }
