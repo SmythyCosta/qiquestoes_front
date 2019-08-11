@@ -6,14 +6,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/index';
 import { FullLayoutComponent } from './layout/index';
+import { RegisterComponent } from './register/register.component';
 //import { AuthGuard } from './_guards/index';
 
 export const appRoutes: Routes = [
-  {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full',
-  },
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
+  { path: 'register', component: RegisterComponent, data: {title: 'register'} },
   {
     path: 'admin',
     component: FullLayoutComponent,
