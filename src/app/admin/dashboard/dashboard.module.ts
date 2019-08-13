@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardRoutes } from './dashboard.routing';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [WelcomeComponent],
   imports: [
     CommonModule,
     DashboardRoutes

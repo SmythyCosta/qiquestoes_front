@@ -20,7 +20,7 @@ export const appRoutes: Routes = [
       { path: 'disciplina', loadChildren: './admin/disciplina/disciplina.module#DisciplinaModule' },
       { path: 'questoes', loadChildren: './admin/questoes/questoes.module#QuestoesModule' },
       //{ path: 'area-formacao', loadChildren: './admin/area-formacao/area-formacao.module#AreaFormacaoModule' },
-      //{ path: 'dashboard', loadChildren: './dashboard/dashboard/dashboard.module#DashboardModule' },
+      { path: 'dashboard', loadChildren: './admin/dashboard/dashboard.module#DashboardModule' },
     ]
  },
   { path: 'login', component: LoginComponent, data: {title: 'login'} },

@@ -1,6 +1,7 @@
 // ############## Core Angular ##############
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 // ############## Components ##############
 
@@ -10,7 +11,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const dashboardRoutes: Routes = [
-    //{ path: '', component: ListarComponent },
+    { path: '', component: WelcomeComponent },
     // { path: 'success/:success', component: BlocoListComponent },
     // path: 'form', component: FormComponent },
     // { path: 'form/:id', component: BlocoFormComponent, canActivate: [CheckCondominioGuard] },
