@@ -22,6 +22,9 @@ export class LoginComponent implements OnInit {
     ) { }
 
     ngOnInit() {
+
+        this.checkLocalStorage();
+        
         this.loginForm = this.formBuilder.group({
             username: ['', Validators.required],
             password: ['', Validators.required]
@@ -57,5 +60,11 @@ export class LoginComponent implements OnInit {
                     this.error = error;
                     this.loading = false;
                 });
+    }
+
+    checkLocalStorage(){
+        if (localStorage.getItem('currentUser') !=null) {
+            this.router.navigate(['/admin/dashboard']);
+        }
     }
 }

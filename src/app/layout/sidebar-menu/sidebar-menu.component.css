@@ -1,3 +1,7 @@
 .item-menu {
     padding-left: 15px;
 }
+
+.c-logout:hover {
+    background-color: brown;
+}
