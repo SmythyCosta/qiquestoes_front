@@ -18,8 +18,10 @@ import { ContentComponent,
   NavbarExpandComponent,
   SidebarMenuComponent,  } from './layout/index';
 
-  import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { RegisterComponent } from './register/register.component';
+import { AlertService, AuthenticationService } from './_services';
+import { SharedModule } from './_shared/shared.module';
 
 
 
@@ -39,6 +41,7 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    SharedModule,
     AppRoutingModule,
   ],
   providers: [
@@ -46,6 +49,8 @@ import { RegisterComponent } from './register/register.component';
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     // provider used to create fake backend
     //fakeBackendProvider
+    AlertService,
+    AuthenticationService,
 ],
   bootstrap: [AppComponent]
 })

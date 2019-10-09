@@ -1,0 +1,26 @@
+<!-- ============================================================== -->
+<!-- Estar noticação é exibida em caso de cadastro  -->
+<!-- e logo em seguida redirecione para a listagem.  -->
+<!-- Obs: é necessario a URL ter um parametro success = 1.  -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-md-12">
+        <div *ngIf="notificacaoExibir" class="alert alert-success">
+                Operação realizada com sucesso
+            <a class="close">&times;</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- ============================================================== -->
+<!-- Mensagens exibidas pelo servico de noticação  -->
+<!-- deve retorna respostas obitdas da api  -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-md-12">
+        <alert-messege></alert-messege>
+    </div>
+</div>

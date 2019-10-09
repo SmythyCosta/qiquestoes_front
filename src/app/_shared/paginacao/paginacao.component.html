@@ -1,0 +1,50 @@
+<!-- ============================================================== -->
+<!-- paginacao de resultados de acordo com a API  -->
+<!-- ============================================================== -->
+<!-- PAginacao de reultados -->
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8" style="text-align: center">
+        <!-- ====================================== -->
+        <!-- Begin Primerio e anterior  -->
+        <!-- ====================================== --> 
+        <button class="btn btn-primary" (click)="setPage(paginacao.first_page, $event)">Primeiro</button>
+        <button class="btn btn-primary" (click)="setPage(paginacao.previous_page, $event)">«</button>
+
+        <!-- ====================================== -->
+        <!-- Elementos da esquerda -->
+        <!-- ====================================== --> 
+        <div *ngIf="paginacao.current_page == 1; else linkEsquerda2" style="display: inline;">
+        </div>
+        <div #linkEsquerda2 *ngIf="paginacao.current_page == 2; else linkEsquerda3" style="display: inline;">
+            <button class="btn btn-default" (click)="setPage(paginacao.current_page - 1, $event)">{{paginacao.current_page - 1}}</button>
+        </div>
+        <div #linkEsquerda3 *ngIf="paginacao.current_page > 2" style="display: inline;">
+            <button class="btn btn-default" (click)="setPage(paginacao.current_page - 2, $event)">{{paginacao.current_page - 2}}</button>
+            <button class="btn btn-default" (click)="setPage(paginacao.current_page - 1, $event)">{{paginacao.current_page - 1}}</button>
+        </div>
+
+        <!-- ====================================== -->
+        <!-- Elementos do centro Ativo\Selecionado -->
+        <!-- ====================================== --> 
+        <button class="btn btn-danger" (click)="setPage(paginacao.current_page, $event)">{{paginacao.current_page}}</button>
+
+        <!-- ====================================== -->
+        <!-- Elementos da direita -->
+        <!-- ====================================== --> 
+        <div *ngIf="paginacao.falta_percorer == 1; else linkdireita2" style="display: inline;">
+            <button class="btn btn-default" (click)="setPage(paginacao.current_page + 1, $event)">{{paginacao.current_page + 1}}</button>
+        </div>
+        <div #linkdireita2 *ngIf="paginacao.falta_percorer > 1" style="display: inline;">
+            <button class="btn btn-default" (click)="setPage(paginacao.current_page + 1, $event)">{{paginacao.current_page + 1}}</button>
+            <button class="btn btn-default" (click)="setPage(paginacao.current_page + 2, $event)">{{paginacao.current_page + 2}}</button>
+        </div>
+
+        <!-- ====================================== -->
+        <!-- End Ultimo e anterior  -->
+        <!-- ====================================== --> 
+        <button class="btn btn-primary" (click)="setPage(paginacao.next_page, $event)">»</button>
+        <button class="btn btn-primary" (click)="setPage(paginacao.last_page, $event)">Último</button>
+    </div>
+    <div class="col-md-2"></div>
+</div>

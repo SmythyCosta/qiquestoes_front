@@ -1,0 +1,18 @@
+<style>
+.msg-notificacao {
+    display: inline;
+}
+.pdd {
+    padding-top: 0px;
+    padding-bottom: 05px;
+}
+.pdd-close {
+    padding-top: 20px;
+    cursor: pointer;
+}
+</style>
+
+<div *ngIf="message" [ngClass]="{ 'alert pdd': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error', 'alert-warning': message.type === 'warning' }">
+    <h5 class="msg-notificacao">{{message.text}}</h5>
+    <a class="close pdd-close" (click)="alertClose()">&times;</a>
+</div>
